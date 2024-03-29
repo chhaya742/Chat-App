@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import User from "../models/user.model.js";
-const secretOrPrivateKey = process.env.JWT_SECRET || "chhayabagwan"
+const secretOrPrivateKey = process.env.JWT_SECRET
 const protectRoute = async (req, res, next) => {
 	try {
 		const token = req.cookies.jwt;
