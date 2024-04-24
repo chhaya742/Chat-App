@@ -29,7 +29,6 @@ const Conversation = ({ conversation, lastIdx, emoji }) => {
 					</div>
 				</div>
 			</div>
-
 			{!lastIdx && <div className='divider my-0 py-0 h-1' />}
 		</>
 	);
