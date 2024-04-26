@@ -1,17 +1,13 @@
+import { useState, useEffect } from "react";
 import MessageContainer from "../components/MessageContainer";
 import Sidebar from "../components/Sidebar";
+import useResponsive from "../hooks/useResponsive";
 
 const Home = () => {
-	
-	const viewportWidth = window.innerWidth; // Viewport width in pixels
-	const viewportHeight = window.innerHeight; // Viewport height in pixels
-
-	console.log("Viewport width: " + viewportWidth + "px");
-	console.log("Viewport height: " + viewportHeight + "px");
-
+	const { size } = useResponsive()
 	return (
 		<div className='flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-			{viewportWidth <=390 ? <MessageContainer /> : <><Sidebar /> <MessageContainer /></>}
+			{size <= 425 ? <MessageContainer /> : <><Sidebar /> <MessageContainer /></>}
 		</div>
 	);
 };
