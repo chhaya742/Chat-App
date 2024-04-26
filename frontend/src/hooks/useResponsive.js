@@ -11,7 +11,7 @@ const useResponsive = () => {
         };
         window?.addEventListener('resize', updateSize);
         updateSize();
-        size <= 425 && setIsOpen(!isOpen);
+        size <= 430 && setIsOpen(!isOpen);
         return () => window?.removeEventListener('resize', updateSize);
 
     }, [size]);

@@ -23,20 +23,20 @@ const MessageContainer = () => {
 	}, [setSelectedConversation]);
 
 	useEffect(() => {
-		viewportWidth <= 425 && setIsOpen(!isOpen);
+		viewportWidth <= 430 && setIsOpen(!isOpen);
 	}, [selectedConversation]);
 
 	return (
-		<div className='md:min-w-[450px] flex flex-col'>
+		<div className='md:min-w-[450px] w-[50vh] flex flex-col'>
 			{!selectedConversation ? (
-				viewportWidth > 425 && <NoChatSelected />
+				viewportWidth > 430 && <NoChatSelected />
 			) : !isOpen && (
 				<>
 					{/* Header */}
 					<div className='bg-slate-500 px-4 py-2 mb-2'>
 						<div className="d flex justify-between">
 							<span className='label-text'>To:</span>{" "}
-							{viewportWidth <= 425 && <><button onClick={toggleList}><FaArrowRight /></button>
+							{viewportWidth <= 430 && <><button onClick={toggleList}><FaArrowRight /></button>
 							</>
 							}
 						</div>
@@ -70,7 +70,7 @@ const NoChatSelected = () => {
 					<p>Welcome 👋 {authUser.fullName} ❄</p>
 					<p>Select a chat to start messaging</p>
 					<TiMessages className='text-3xl md:text-6xl text-center' />
-					{viewportWidth <= 425 && <> <button style={{
+					{viewportWidth <= 430 && <> <button style={{
 						position: "relative",
 						left: "101px"
 					}} onClick={toggleList}><FaSquarePlus /></button>
