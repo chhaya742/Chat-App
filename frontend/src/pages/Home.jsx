@@ -6,7 +6,7 @@ import useResponsive from "../hooks/useResponsive";
 const Home = () => {
 	const { size } = useResponsive()
 	return (
-		<div className='flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
+		<div className='flex sm:h-[450px] md:h-[538px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
 			{size <= 425 ? <MessageContainer /> : <><Sidebar /> <MessageContainer /></>}
 		</div>
 	);
